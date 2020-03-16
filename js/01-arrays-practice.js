@@ -35,19 +35,48 @@ for (movie in movies) {
     window.console.log(movies[movie]);
 }
 //STEP 7
+let movie;
 let movies = ["Scarface", "Breakfast at Tiffany's", "Fight Club", "Blow", "Goodfellas", "The Irishmen", "The Godfather"];
-window.console.log(movies.sort());
+for (movie in movies) {
+    movies.sort();
+    window.console.log(movies[movie]);
 
 //STEP 8
-
+let movies = ["Scarface", "Breakfast at Tiffany's", "Fight Club", "Blow", "Goodfellas", "The Irishmen", "The Godfather"];
+    window.document.write('Movies I like:' + '<br>' + '<br>')
+    for (i = 0, i < movies.length; i +=1) {
+        window.document.write(movies[i] + '<br>';
+    }
+let regrets = ["Child's Play", "In the Tall Grass", "Angel has Fallen"];
+    window.document.write('<br>' + 'Movies I regret:' + '<br>' + '<br>')
+    for (i = 0; i < regrets.length; i += 1) {
+        window.document.write(regrets[i] + '<br>');
+    }
 //STEP 9
-
+let movies = ["Scarface", "Breakfast at Tiffany's", "Fight Club", "Blow", "Goodfellas", "The Irishmen", "The Godfather"];
+let regrets = ["Child's Play", "In the Tall Grass", "Angel has Fallen"];
+let allMovies = movies.concat(regrets)
+    window.document.write(allMovies.reverse());
 //STEP 10
-
+let movies = ["Scarface", "Breakfast at Tiffany's", "Fight Club", "Blow", "Goodfellas", "The Irishmen", "The Godfather"];
+let regrets = ["Child's Play", "In the Tall Grass", "Angel has Fallen"];
+let allMovies = movies.concat(regrets)
+    window.document.write(allMovies.reverse());  
+    window.console.log(allMovies[9]);
 //STEP 11
-
+let movies = ["Scarface", "Breakfast at Tiffany's", "Fight Club", "Blow", "Goodfellas", "The Irishmen", "The Godfather"];
+let regrets = ["Child's Play", "In the Tall Grass", "Angel has Fallen"];
+let allMovies = movies.concat(regrets)
+    window.document.write(allMovies.reverse());  
+    allMovies = allMovies.slice(9);
+    window.console.log(allMovies);
 //STEP 12
-
+let movies = ["Scarface", "Breakfast at Tiffany's", "Fight Club", "Blow", "Goodfellas", "The Irishmen", "The Godfather"];
+let regrets = ["Child's Play", "In the Tall Grass", "Angel has Fallen"];
+let allMovies = movies.concat(regrets)
+    window.document.write(allMovies.reverse() + '<br>' + '<br>');  
+    allMovies.splice( //ADD MORE MOVIES HERE*******************************
+    window.document.write(allMovies);
 //STEP 13
 
 //STEP 14
