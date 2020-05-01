@@ -78,9 +78,47 @@ let allMovies = movies.concat(regrets)
     allMovies.splice( //ADD MORE MOVIES HERE*******************************
     window.document.write(allMovies);
 //STEP 13
-
+let employee1 = [];
+let employee2 = [];
+employee1['id'] = 1267;
+employee1['name'] = 'Ralph';
+employee1['title'] = 'overseer';
+employee1['department'] = 'R&D';
+employee1['current'] = true;
+employee2['id'] = 0307;
+employee2['name'] = 'Dobie';
+employee2['title'] = 'Queen Bee';
+employee2['department'] = 'security';
+employee2['current'] = true;
+        
+let employee;
+let employees = employee1.concat(employee2);
+for (employee in employees) {
+    console.log(employees[employee])
+}
+console.log(employee2['name']);
 //STEP 14
+let workerA = [];
+let workerB = [];
+workerA['id'] = 1115;
 
+workerA['name'] = 'Bean';
+
+workerA['title'] = 'flirt';
+
+workerA['department'] = 'canine resources';
+
+workerA['current'] = true;
+
+workerB['id'] = 1206;
+
+workerB['name'] = 'Bandit';
+
+workerB['title'] = 'Prince';
+
+workerB['department'] = '';
+
+workerB['current'] = true;
 //STEP 15
 
 //STEP 16
