@@ -101,36 +101,122 @@ console.log(employee2['name']);
 let workerA = [];
 let workerB = [];
 workerA['id'] = 1115;
-
 workerA['name'] = 'Bean';
-
 workerA['title'] = 'flirt';
-
 workerA['department'] = 'canine resources';
-
 workerA['current'] = true;
-
 workerB['id'] = 1206;
-
 workerB['name'] = 'Bandit';
-
 workerB['title'] = 'Prince';
-
 workerB['department'] = '';
-
 workerB['current'] = true;
 //STEP 15
+console.log(`********************** STEP 15 *********************************`)
+let step15 = [];
+let arr = [];
+employee3["name"] = 'Fedor'
+employee3["employed"] = false
+employee3["employeeid"] = 3000
+employee3.title = 'engineer'
+employee3.department = 'DC Protection'
+employees.push(employee3)
+for (let item of employees) {
+    console.log(item)
+    if (item.employed === true) {
+        arr.push(item)
+    }
+}
+for (let item of arr) {
+    for (let i in item) {
+        step15.push(`${i}: ${item[i]}`)
+    }
+    step15.push('***********')
+}
+console.log(step15)
 
 //STEP 16
+console.log(`********************** STEP 16 *********************************`)
+let favoriteMoviesRate = [["Limitless", 5], ["Terminator", 2], ["Wallstreet never sleeps", 4], ["P.S. I love you", 3], ["Gladiator", 1]];
+// using Map, finter is for onather case
 
+let step16 = favoriteMoviesRate.map( item => {
+    console.log(item[0])
+        return item[0]
+} )
+console.log('step16',step16)
 //STEP 17
-
+console.log(`********************** STEP 17 *********************************`)
+let employeeNames = ['ZAK',
+    'JESSICA',
+    'MARK',
+    'FRED',
+    'SALLY'
+]
+function showEmployee(arr) {
+    return arr.map( item => {return `${item} <br>`}).toString()
+}
+let step17 = showEmployee(employeeNames);
+console.log(step17)
 //STEP 18
+console.log(`********************** STEP 18 *********************************`)
+function filter_array_values(arr) {
+    arr = arr.filter(isEligible);
+    return arr;
+}
 
+function isEligible(value) {
+    if(value !== false || value !== null || value !== 0 || value !== "") {
+        return value;
+    }
+}
+let step18 = filter_array_values([58, '', 'abcd', true, null, false, 0])
+console.log(step18)
 //STEP 19
+console.log(`********************** STEP 19 *********************************`)
+function random_item(items)
+{
+    return items[Math.floor(Math.random()*items.length)];
+}
+var items = [254, 45, 212, 365, 2543];
+console.log(random_item(items));
+let step19 = random_item(items);
+console.log(step19)
 
 //STEP 20
+console.log(`********************** STEP 20 *********************************`)
+  let arrToSort =  [3, 8, 9, 7, 2]
+const bubbleSort = arr => {
 
+    for (let i = 0; i < arr.length - 1; i++) {
+        let change = false;
+        for (let j = 0; j < arr.length - (i + 1); j++) {
+            if (arr[j] > arr[j + 1]) {
+                change = true;
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+        }
+        if (!change) break;
+    }
+    return arr;
+};
+
+const quickSort = arr => {
+    if (arr.length < 2) return arr;
+    const pivot = arr[Math.floor(Math.random() * arr.length)];
+
+    let left = [];
+    let equal = [];
+    let right = [];
+
+    for (let element of arr) {
+        if (element > pivot) right.push(element);
+        else if (element < pivot) left.push(element);
+        else equal.push(element);
+    }
+    return quickSort(left)
+        .concat(equal)
+        .concat(quickSort(right));
+};
 
 // inventory
 function view(inventory) {
